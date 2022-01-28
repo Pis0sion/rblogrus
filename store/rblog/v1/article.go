@@ -10,7 +10,7 @@ type unifiedValidator interface {
 }
 
 type Article struct {
-	metav1.ObjectMeta  `json:"metadata,omitempty"`
+	metav1.ObjectMeta  `json:",inline"`
 	AuthorID           uint64 `json:"authorID"     gorm:"column:authorID" validate:"omitempty"`
 	ArticleTitle       string `json:"articleTitle" gorm:"column:articleTitle" validate:"omitempty"`
 	ArticleContent     string `json:"articleContent"  gorm:"column:articleContent" validate:"omitempty"`
