@@ -1,13 +1,13 @@
 package v1
 
 import (
-	metaV1 "github.com/Pis0sion/rblogrus/meta/types"
+	metav1 "github.com/Pis0sion/rblogrus/meta/types"
 	"time"
 )
 
 type Secret struct {
 
-	metaV1.ObjectMeta `json:"metadata,omitempty"`
+	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	AppName         string    `json:"appName"        gorm:"column:appName"  validate:"omitempty"`
 	InstanceID      int       `json:"instanceID"     gorm:"column:instanceID"  validate:"omitempty"`
@@ -17,7 +17,7 @@ type Secret struct {
 	ExpireTime      time.Time `json:"expireTime"     gorm:"column:expireTime"  validate:"omitempty"`
 }
 
-func (s Secret) TableName() string {
+func (s *Secret) TableName() string {
 	return "secret"
 }
 

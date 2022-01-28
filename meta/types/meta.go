@@ -10,3 +10,7 @@ type ObjectMeta struct {
 	// updateAt
 	UpdatedAt time.Time `json:"updatedAt,omitempty" gorm:"column:updatedAt"`
 }
+
+type ListMeta struct {
+	TotalCount int64 `json:"totalCount,omitempty"`
+}
