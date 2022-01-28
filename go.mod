@@ -3,7 +3,7 @@ module github.com/Pis0sion/rblogrus
 go 1.17
 
 require (
-	github.com/Pis0sion/components v1.0.1
+	github.com/Pis0sion/components v1.0.2
 	google.golang.org/grpc v1.44.0
 	google.golang.org/protobuf v1.27.1
 )
