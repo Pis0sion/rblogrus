@@ -15,7 +15,7 @@ type Article struct {
 	ArticleTitle       string `json:"articleTitle" gorm:"column:articleTitle" validate:"omitempty"`
 	ArticleContent     string `json:"articleContent"  gorm:"column:articleContent" validate:"omitempty"`
 	ArticleDescription string `json:"articleDescription"  gorm:"column:articleDescription" validate:"omitempty"`
-	Status             int    `json:"status"    gorm:"column:Status" validate:"omitempty"`
+	Status             int    `json:"status"    gorm:"column:status" validate:"omitempty"`
 }
 
 type ArticleList struct {
